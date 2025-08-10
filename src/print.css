@@ -1,0 +1,114 @@
+/* Print-specific styles for the greeting card */
+@media print {
+  /* Force page size */
+  @page {
+    size: A4 landscape;
+    margin: 5mm;
+  }
+  /* Hide UI elements when printing */
+  .fixed {
+    display: none !important;
+  }
+  
+  /* Remove backgrounds that might not print well */
+  body {
+    background: white !important;
+  }
+  
+  /* Ensure the card fills the page */
+  #printable-card {
+    max-width: 100% !important;
+    margin: 0 !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    width: 100% !important;
+  }
+  
+  /* Remove outer padding */
+  .min-h-screen {
+    min-height: auto !important;
+    padding: 0 !important;
+  }
+  
+  /* Disable all page breaks for single page */
+  * {
+    page-break-before: avoid !important;
+    page-break-after: avoid !important;
+    page-break-inside: avoid !important;
+    break-before: avoid !important;
+    break-after: avoid !important;
+    break-inside: avoid !important;
+  }
+  
+  /* Ensure colors print */
+  * {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+    color-adjust: exact !important;
+  }
+  
+  /* Scale down for better fit on single page */
+  #printable-card {
+    transform: scale(0.6);
+    transform-origin: top left;
+  }
+  
+  /* Reduce font sizes for print */
+  .print\:text-sm {
+    font-size: 0.75rem !important;
+  }
+  
+  .print\:text-xs {
+    font-size: 0.625rem !important;
+  }
+  
+  /* Compact spacing for print */
+  .print\:p-2 {
+    padding: 0.5rem !important;
+  }
+  
+  .print\:p-4 {
+    padding: 1rem !important;
+  }
+  
+  .print\:space-y-2 > * + * {
+    margin-top: 0.5rem !important;
+  }
+  
+  .print\:space-y-4 > * + * {
+    margin-top: 1rem !important;
+  }
+  
+  /* Remove animations */
+  * {
+    animation: none !important;
+    transition: none !important;
+  }
+}
+
+/* Styles for PDF export */
+.pdf-export {
+  width: 210mm;
+  min-height: 297mm;
+  margin: 0 auto;
+  background: white;
+}
+
+/* Greeting card fold lines (optional) */
+.fold-line {
+  border-top: 1px dashed #ccc;
+  margin: 2rem 0;
+  position: relative;
+}
+
+.fold-line::before {
+  content: "Fold here";
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: white;
+  padding: 0 10px;
+  color: #999;
+  font-size: 10px;
+}
