@@ -227,8 +227,8 @@ export default function AmarBirthdayCardPrintable() {
           {/* Limited Edition Badge with Image */}
           <div className="absolute top-4 right-4 w-24 h-24">
             <img 
-              src="/dr-dhiman-limited-edition.png" 
-              alt="Limited Edition" 
+              src="./dr-dhiman-limited-edition.png" 
+              alt="Limited Edition"
               className="w-full h-full object-contain drop-shadow-2xl transform rotate-12 hover:rotate-6 transition-transform"
               onError={(e) => {
                 e.target.style.display = 'none';
@@ -242,8 +242,8 @@ export default function AmarBirthdayCardPrintable() {
           </div>
           <div className="w-64 h-64 mx-auto rounded-2xl overflow-hidden shadow-2xl border-4 border-white">
             <img 
-              src="/portrait.png" 
-              alt="Amar Singh Portrait" 
+              src="./portrait.png" 
+              alt="Amar Singh Portrait"
               className="w-full h-full object-cover"
               onError={(e) => {
                 e.target.style.display = 'none';
@@ -566,8 +566,8 @@ export default function AmarBirthdayCardPrintable() {
           <div className="flex justify-center mb-8">
             <div className="w-full max-w-4xl rounded-2xl overflow-hidden shadow-2xl border-4 border-amber-400">
               <img 
-                src="/dr-dhiman-limited-edition.png" 
-                alt="Limited Edition - Special Birthday Card" 
+                src="./dr-dhiman-limited-edition.png" 
+                alt="Limited Edition - Special Birthday Card"
                 className="w-full h-auto object-contain bg-gradient-to-br from-amber-50 to-yellow-50"
                 onError={(e) => {
                   e.target.style.display = 'none';
